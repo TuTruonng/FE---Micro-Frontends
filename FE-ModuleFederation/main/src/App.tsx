@@ -22,6 +22,8 @@ const ShoppingCart = lazy(() => import("./screens/ShoppingCart"));
 const Checkout = lazy(() => import("./screens/Checkout"));
 const PaymentFailed = lazy(() => import("./screens/PaymentFailed"));
 const PaymentSuccess = lazy(() => import("./screens/PaymentSuccess"));
+const FormFeedback = lazy(() => import("./screens/FormFeedback"));
+
 import eventBus  from 'js-event-bus';
 
 function App() {
@@ -38,7 +40,7 @@ function App() {
       }})}
       <Router>
         <Routes>
-          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/callback" element={<Auth />} />
             <Route path="/shop">
@@ -54,6 +56,7 @@ function App() {
             <Route path="/checkout" element={<Checkout eventBus={eventBusInit}/>} />
             <Route path="/payment-success" element={<PaymentSuccess />} />
             <Route path="/payment-failed" element={<PaymentFailed />} />
+            <Route path="/" element={<FormFeedback />} />
           </Route>
         </Routes>
       </Router>

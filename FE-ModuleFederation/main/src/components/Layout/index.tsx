@@ -5,6 +5,7 @@ import Hamburger from "../Hamburger";
 import Header from "../Header";
 import TopSection from "../TopSection";
 import Footer from "../Footer";
+import FormFeedback from "@/screens/FormFeedback";
 
 const fallbackComponent = () => {
   return (
@@ -40,6 +41,7 @@ function Layout() {
         <Suspense fallback={fallbackComponent()}>
           <Outlet />
         </Suspense>
+        <FormFeedback />
       </div>
       <Footer />
     </div>

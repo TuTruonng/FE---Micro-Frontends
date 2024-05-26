@@ -139,6 +139,7 @@ module.exports = {
         product: `${remotes.product.scope}@${remotes.product.url}`,
         shared: `${remotes.shared.scope}@${remotes.shared.url}`,
         chat: `${remotes.chat.scope}@${remotes.chat.url}`,
+        feedback: `${remotes.feedback.scope}@${remotes.feedback.url}`,
       },
       shared: {
         ...dependencies,
